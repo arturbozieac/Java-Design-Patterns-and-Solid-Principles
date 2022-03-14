@@ -14,13 +14,14 @@ public class UserController {
     public String createUser(String requestContent) {
     	
     	User user = null;
+    	UserMapper mapper;
     	if(isJSONValid(requestContent)) {
     		// Map a user from a json request
-    		JsonUserMapper mapper = new JsonUserMapper();
+    		mapper = new JsonUserMapper();
     		user = mapper.mapUser(requestContent);
     	}else if(isXMLValid(requestContent)) {
     		// Map a user from a xml request
-    		XmlUserMapper mapper = new XmlUserMapper();
+    		mapper = new XmlUserMapper();
     		user = mapper.mapUser(requestContent);
     	}
 
