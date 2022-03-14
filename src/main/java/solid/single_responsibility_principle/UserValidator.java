@@ -1,4 +1,4 @@
-package single_responsibility_principle;
+package solid.single_responsibility_principle;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

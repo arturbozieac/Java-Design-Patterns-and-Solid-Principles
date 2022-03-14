@@ -1,4 +1,4 @@
-package single_responsibility_principle;
+package solid.single_responsibility_principle;
 
 import org.json.JSONArray;
 import org.json.JSONException;
