@@ -7,7 +7,17 @@ import java.time.LocalDate;
 public class Client {
 
 	public static void main(String[] args) {
+		UserDTO userDTO = directBuild(new UserWebDTOBuilder(), createUser());
+		System.out.println(userDTO);
+	}
+	
+	private static UserDTO directBuild(UserDTOBuilder builder, User user) {
 		
+		return builder.withFirstName(user.getFirstName())
+					   .withLastName(user.getLastName())
+					   .withBirthday(user.getBirthday())
+					   .withAddress(user.getAddress())
+					   .build();
 	}
 	
 	/**
