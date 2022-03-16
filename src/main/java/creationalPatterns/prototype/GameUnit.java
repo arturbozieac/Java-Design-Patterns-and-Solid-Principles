@@ -6,7 +6,7 @@ import javafx.geometry.Point3D;
 /**
  * This class represents an abstract prototype & defines the clone method
  */
-public abstract class GameUnit {
+public abstract class GameUnit implements Cloneable{
 	
 	private Point3D position;
 	
@@ -26,5 +26,19 @@ public abstract class GameUnit {
 	
 	public Point3D getPosition() {
 		return position;
+	}
+	
+	public void initialize() {
+		this.position = Point3D.ZERO;
+	}
+	
+	public abstract void resetUnit();
+	
+	@Override
+	protected GameUnit clone() throws CloneNotSupportedException {
+		GameUnit unit = (GameUnit)super.clone();
+		unit.resetUnit();
+		unit.initialize();
+		return unit;
 	}
 }
