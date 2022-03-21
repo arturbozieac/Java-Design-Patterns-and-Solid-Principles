@@ -1,8 +1,6 @@
-package com.coffeepoweredcrew.abstractfactory2.gcp;
+package creationalPatterns.abstractFactory.gcp;
 
-import com.coffeepoweredcrew.abstractfactory2.Instance;
-import com.coffeepoweredcrew.abstractfactory2.ResourceFactory;
-import com.coffeepoweredcrew.abstractfactory2.Storage;
+import creationalPatterns.abstractFactory.ResourceFactory;
 
 //Factory implementation for Google cloud platform resources
 public class GoogleResourceFactory implements ResourceFactory {
