@@ -5,5 +5,11 @@ package creationalPatterns.singleton;
  */
 public class EagerRegistry {
 	
-
+	private EagerRegistry() {};
+	
+	private static final EagerRegistry INSTANCE = new EagerRegistry();
+	
+	public EagerRegistry getInstance() {
+		return INSTANCE;
+	}
 }

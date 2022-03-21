@@ -6,5 +6,9 @@ package creationalPatterns.singleton;
  * mechanism and still ensure single instance
  */
 public enum RegistryEnum {
+	INSTANCE;
 	
+	public void getConfiguration() {
+		// Very strange and interesting implementation.
+	}
 }

@@ -9,5 +9,19 @@ package creationalPatterns.singleton;
  */
 public class LazyRegistryWithDCL {
 
- 
+	private LazyRegistryWithDCL() {};
+	
+	// Make sure to use volatile to assure that a thread gets the latest version of the object
+	private static volatile LazyRegistryWithDCL INSTANCE;
+	
+	public static LazyRegistryWithDCL getInstance() {
+		if (INSTANCE == null) {
+			synchronized (LazyRegistryWithDCL.class) {
+				if (INSTANCE == null) {
+					INSTANCE = new LazyRegistryWithDCL();
+				}
+			}
+		}
+		return INSTANCE;
+	}
 }
