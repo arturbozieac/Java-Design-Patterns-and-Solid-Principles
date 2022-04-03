@@ -2,6 +2,7 @@ package behavioralPatterns.command;
 
 import java.util.LinkedList;
 import java.util.List;
+
 //Throw Away POC code DON'T USE in PROD
 //This is invoker actually executing commands. 
 //starts a worker thread in charge of executing commands
@@ -25,7 +26,7 @@ public class MailTasksRunner implements Runnable {
 		runner.start();
 	}
 
-	//Run method takes pending commands and executes them.
+	// Run method takes pending commands and executes them.
 	@Override
 	public void run() {
 
@@ -43,16 +44,16 @@ public class MailTasksRunner implements Runnable {
 						}
 					}
 				}
-				cmd = pendingCommands.isEmpty()?null:pendingCommands.remove(0);
+				cmd = pendingCommands.isEmpty() ? null : pendingCommands.remove(0);
 			}
 			if (cmd == null)
 				return;
-			//cmd.execute();
+			 cmd.execute();
 		}
 
 	}
-	
-	//Giving it a command will schedule it for later execution
+
+	// Giving it a command will schedule it for later execution
 	public void addCommand(Command cmd) {
 		synchronized (pendingCommands) {
 			pendingCommands.add(cmd);
