@@ -1,7 +1,9 @@
 package behavioralPatterns.chainOfResponsability;
 
+import behavioralPatterns.chainOfResponsability.LeaveApplication.Type;
+
 //A concrete handler
-/*public class Director extends Employee {
+public class Director extends Employee {
 
 	public Director(LeaveApprover nextApprover) {
 		super("Director", nextApprover);
@@ -16,4 +18,4 @@ package behavioralPatterns.chainOfResponsability;
 		return false;
 	}
 	
-}*/
+}
