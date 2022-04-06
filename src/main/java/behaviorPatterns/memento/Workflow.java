@@ -2,7 +2,6 @@ package behaviorPatterns.memento;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.stream.Collectors;
 
 public class Workflow {
 
