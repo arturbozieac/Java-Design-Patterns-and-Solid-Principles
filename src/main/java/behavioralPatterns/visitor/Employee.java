@@ -11,4 +11,6 @@ public interface Employee {
 	Collection<Employee> getDirectReports();
 
 	int getEmployeeId();
+	
+	public void accept(Visitor visitor);
 }

@@ -1,4 +1,4 @@
-package com.coffeepoweredcrew.visitor;
+package behavioralPatterns.visitor;
 
 import java.util.Collection;
 import java.util.Collections;
